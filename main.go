@@ -1,21 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
-var show = fmt.Println
-func Add(x,y int ) int {
-	reult:=x+y
-	return reult
-}
+	adder "github.com/tsegaywelu/2-numbers-adder/adder"
+)
+
+
 
 func main() {
 
-	show("plase enter two numbers to add ")
+	fmt.Println("plase enter two numbers to add ")
 	var x, y int
 
 	fmt.Scan(&x,&y)
 
-	sum:=Add(x,y)
-	show("the sum is :",sum)
+	sum:=adder.Adder(x,y)
+	fmt.Println("the sum is :",sum)
 
 }
